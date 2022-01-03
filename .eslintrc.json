@@ -2,12 +2,14 @@
 	"env": {
 		"node": true,
 		"es2021": true,
-		"browser": true
+		"browser": true,
+		"cypress/globals": true
 	},
 	"extends": [
 		"eslint:recommended",
 		"next/core-web-vitals",
 		"plugin:react/recommended",
+		"plugin:cypress/recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:prettier/recommended"
 	],
@@ -19,7 +21,7 @@
 		"sourceType": "module",
 		"ecmaVersion": "latest"
 	},
-	"plugins": ["react", "@typescript-eslint"],
+	"plugins": ["react", "cypress", "@typescript-eslint"],
 	"rules": {
 		"prettier/prettier": [
 			"error",
@@ -30,7 +32,13 @@
 				"usePrettierrc": true
 			}
 		],
-		"react/react-in-jsx-scope": "off"
+		"cypress/no-force": "warn",
+		"cypress/no-pause": "error",
+		"cypress/no-async-tests": "error",
+		"react/react-in-jsx-scope": "off",
+		"cypress/no-unnecessary-waiting": "error",
+		"cypress/no-assigning-return-values": "error",
+		"cypress/assertion-before-screenshot": "warn"
 	},
 	"settings": {
 		"react": {

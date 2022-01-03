@@ -1,6 +1,5 @@
 {
   "name": "nextjs-typescript-cypress-storybook-eslint-prettier-tailwindcss",
-  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
